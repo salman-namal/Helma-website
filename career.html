@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Helma Engineering Pvt Ltd</title>
+    <meta name="description" content="Join Helma Engineering. Explore openings and submit your application with resume upload.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav id="navbar" class="navbar scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" aria-label="Helma Engineering home">
+                <img class="logo-image" src="Company logo/logo.png" alt="Helma Engineering logo" loading="lazy" onerror="this.style.display='none';">
+                <span class="logo-copy">
+                    <strong>Helma Engineering</strong>
+                    <small>Helma Engineering Pvt Ltd</small>
+                </span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="career.html" style="color: var(--accent-color);">Career</a></li>
+                <li><a href="index.html#clients">Clients</a></li>
+                <li><a href="index.html#partners">Partners</a></li>
+                <li><a href="index.html#contact" class="btn-outline">Contact Us</a></li>
+            </ul>
+            <button class="hamburger" type="button" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container" data-aos="fade-up">
+            <h1 class="hero-title services-header-title">Careers at Helma Engineering</h1>
+            <p class="hero-tagline page-tagline">Build your future with a team that delivers trusted engineering outcomes.</p>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <section class="career-grid" data-aos="fade-up">
+                <div class="career-listings glass-card">
+                    <h2>Open Positions</h2>
+                    <p class="section-desc left-text">This section is ready for dynamic integration from ATS or API sources.</p>
+                    <div class="job-item">
+                        <h3>MEP Site Engineer</h3>
+                        <p>Islamabad | Full-time</p>
+                    </div>
+                    <div class="job-item">
+                        <h3>Security Systems Engineer (ELV)</h3>
+                        <p>Islamabad | Full-time</p>
+                    </div>
+                    <div class="job-item">
+                        <h3>Project Coordinator</h3>
+                        <p>Islamabad | Full-time</p>
+                    </div>
+                </div>
+
+                <div class="career-apply glass-card" data-aos="fade-left">
+                    <h2>Apply Now</h2>
+                    <form id="career-form" class="contact-form" enctype="multipart/form-data">
+                        <div class="form-group"><input type="text" name="fullName" placeholder="Full Name" required></div>
+                        <div class="form-group"><input type="email" name="email" placeholder="Email Address" required></div>
+                        <div class="form-group"><input type="text" name="position" placeholder="Position Applied For" required></div>
+                        <div class="form-group">
+                            <label class="upload-label" for="resume">Upload Resume (PDF/DOC)</label>
+                            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit Application <i class="fas fa-upload"></i></button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Helma Engineering Pvt Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
