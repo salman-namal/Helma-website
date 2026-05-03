@@ -1,29 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Helma Engineering Pvt Ltd</title>
-    <meta name="description" content="Explore Helma Engineering's service lines with detailed scopes and rotating visual galleries.">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/style.css">
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Service Details | Helama Engineering</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-container": "#86a0cd",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "outline": "#74777f",
+                      "surface-tint": "#455f88",
+                      "error": "#ba1a1a",
+                      "surface-container-low": "#f1f4f6",
+                      "tertiary-fixed": "#e2e2e2",
+                      "on-surface-variant": "#43474e",
+                      "inverse-surface": "#2d3133",
+                      "secondary": "#1960a3",
+                      "on-surface": "#181c1e",
+                      "error-container": "#ffdad6",
+                      "on-primary": "#ffffff",
+                      "on-secondary-container": "#00477f",
+                      "secondary-fixed-dim": "#a2c9ff",
+                      "on-tertiary": "#ffffff",
+                      "on-primary-fixed-variant": "#2d476f",
+                      "inverse-on-surface": "#eef1f3",
+                      "tertiary": "#1f2121",
+                      "background": "#f7fafc",
+                      "primary-fixed": "#d6e3ff",
+                      "surface-container-high": "#e5e9eb",
+                      "on-primary-fixed": "#001b3c",
+                      "on-error-container": "#93000a",
+                      "outline-variant": "#c4c6cf",
+                      "primary-container": "#1a365d",
+                      "surface-container": "#ebeef0",
+                      "primary": "#002045",
+                      "secondary-container": "#7db6ff",
+                      "inverse-primary": "#adc7f7",
+                      "surface-container-highest": "#e0e3e5",
+                      "tertiary-container": "#343636",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#adc7f7",
+                      "surface-variant": "#e0e3e5",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-fixed": "#d3e4ff",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "on-secondary": "#ffffff",
+                      "surface-dim": "#d7dadc",
+                      "on-background": "#181c1e",
+                      "on-secondary-fixed-variant": "#004881",
+                      "on-secondary-fixed": "#001c38",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "surface-bright": "#f7fafc",
+                      "on-tertiary-container": "#9e9f9f",
+                      "surface": "#f7fafc"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "margin": "auto",
+                      "gutter": "24px",
+                      "md": "24px",
+                      "lg": "48px",
+                      "sm": "12px",
+                      "xl": "80px",
+                      "xs": "4px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "body-md": ["Inter"],
+                      "display": ["Inter"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(0, 32, 69, 0.9), rgba(0, 32, 69, 0.4));
+        }
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: 200px;
+            gap: 16px;
+        }
+        .masonry-item-tall { grid-row: span 2; }
+        .masonry-item-wide { grid-column: span 2; }
+        .service-button {
+            border: 1px solid rgba(0, 32, 69, .12);
+            background: #fff;
+            padding: 1.25rem 1.5rem;
+            border-radius: 1.5rem;
+            transition: transform .25s ease, border-color .25s ease, background-color .25s ease;
+            text-align: left;
+            cursor: pointer;
+        }
+        .service-button:hover,
+        .service-button.active {
+            transform: translateY(-4px);
+            border-color: #1960a3;
+            background: #002045;
+            color: #fff;
+        }
+        .service-button.active {
+            box-shadow: 0 18px 40px rgba(0, 32, 69, .12);
+        }
+    </style>
 </head>
-<body>
-    <nav id="navbar" class="navbar scrolled">
+<body class="bg-background font-body-md text-on-background selection:bg-secondary-container selection:text-on-secondary-container">
+    <nav id="navbar" class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo" aria-label="Helma Engineering home">
-                <img class="logo-image" src="images/Company logo.jpeg" alt="Helma Engineering logo" loading="lazy" onerror="this.style.display='none';">
-                <span class="logo-copy">
-                    <strong>Helma Engineering Pvt Ltd</strong>
-                </span>
+                <img class="logo-image" src="images/Company logo.jpeg" alt="Helma Engineering logo" loading="lazy"
+                    onerror="this.style.display='none';">
+                <div class="logo-copy">
+                    <strong>Helma Engineering</strong>
+                    <span>Pvt. Ltd.</span>
+                </div>
             </a>
             <ul class="nav-links">
                 <li><a href="index.html#home">Home</a></li>
                 <li><a href="index.html#about">About</a></li>
-                <li><a href="services.html" style="color: var(--accent-color);">Services</a></li>
+                <li><a href="index.html#services">Services</a></li>
                 <li><a href="career.html">Career</a></li>
                 <li><a href="index.html#clients">Clients</a></li>
                 <li><a href="index.html#partners">Partners</a></li>
@@ -34,158 +161,445 @@
             </button>
         </div>
     </nav>
-
-    <header class="page-header">
-        <div class="container" data-aos="fade-up">
-            <h1 class="hero-title services-header-title">Service Portfolio</h1>
-            <p class="hero-tagline page-tagline">Structured details, scalable content, and rotating image galleries for every service.</p>
-        </div>
-    </header>
-
-    <section class="subcategory-container container">
-        <article class="sub-category-block" id="ai" data-aos="fade-up">
-            <div class="sub-image-wrapper service-ai">
-                <div class="swiper service-detail-swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide detail-slide">AI - Operations Automation</div>
-                        <div class="swiper-slide detail-slide">AI - Predictive Insights</div>
-                        <div class="swiper-slide detail-slide">AI - Process Optimization</div>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img id="hero-background" title="Engineering Services Built Around Your Project" alt="Engineering service background" class="w-full h-full object-cover" src="images/Service Image/HVAC/BG.jpg" />
+<div class="absolute inset-0 hero-overlay"></div>
+</div>
+<div class="relative z-10 max-w-[1200px] mx-auto px-8 w-full">
+<div class="max-w-2xl">
+<h1 id="service-title" class="font-display text-display text-white mb-6">HVAC Systems</h1>
+<p id="service-short-title" class="font-body-lg text-body-lg text-white/90 mb-10 leading-relaxed">Energy-efficient indoor climate control solutions |</p>
+<div class="flex gap-4">
+<button class="bg-secondary text-white px-8 py-4 rounded font-label-sm hover:bg-on-secondary-fixed transition-colors shadow-lg">Get Consultation</button>
+<button class="border border-white text-white px-8 py-4 rounded font-label-sm hover:bg-white/10 transition-colors">Our Portfolio</button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-xl bg-surface-container-low">
+<div class="max-w-[1200px] mx-auto px-8">
+<div class="text-center mb-10">
+<p class="text-secondary uppercase tracking-[0.3em] text-sm font-semibold mb-3">Select a service</p>
+<h2 class="font-headline-lg text-headline-lg text-primary">Explore each service detail instantly</h2>
+</div>
+<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+<button type="button" data-service-key="hvac" class="service-button">HVAC Systems</button>
+<button type="button" data-service-key="cctv" class="service-button">CCTV Systems</button>
+<button type="button" data-service-key="fire-alarm" class="service-button">Fire Alarm Systems</button>
+<button type="button" data-service-key="fire-fighting" class="service-button">Fire Fighting Systems</button>
+<button type="button" data-service-key="intruder-alarm" class="service-button">Intruder Alarm Systems</button>
+<button type="button" data-service-key="public-address" class="service-button">Public Address Systems</button>
+<button type="button" data-service-key="access-control" class="service-button">Access Control</button>
+<button type="button" data-service-key="digital-forensics" class="service-button">Digital Forensics</button>
+<button type="button" data-service-key="artificial-intelligence" class="service-button">Artificial Intelligence</button>
+<button type="button" data-service-key="mep" class="service-button">MEP Engineering</button>
+</div>
+</div>
+</section>
+<!-- Service Overview -->
+<section class="py-xl bg-white">
+<div class="max-w-[1200px] mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="space-y-6">
+<h2 id="service-description-heading" class="font-headline-lg text-headline-lg text-primary">Description</h2>
+<p id="service-description" class="text-body-md text-on-surface-variant leading-relaxed">End-to-end HVAC engineering and installation for commercial, industrial, and institutional buildings.</p>
+<p id="service-detail-description" class="text-body-md text-on-surface-variant leading-relaxed">We design and install efficient climate control systems that balance comfort, compliance, and energy savings with smart controls, ductwork, and service planning.</p>
+<div class="pt-4 grid grid-cols-2 gap-8">
+<div>
+<div id="service-stat-1" class="text-secondary font-bold text-3xl">150+</div>
+<div class="text-sm uppercase tracking-wider text-outline">Projects Completed</div>
+</div>
+<div>
+<div id="service-stat-2" class="text-secondary font-bold text-3xl">24/7</div>
+<div class="text-sm uppercase tracking-wider text-outline">Technical Support</div>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary-fixed/30 rounded-xl -z-10 group-hover:bg-primary-fixed/50 transition-colors"></div>
+<img id="service-detail-image" alt="Engineers at work" class="w-full h-[450px] object-cover rounded-xl shadow-xl transition-transform duration-500 group-hover:scale-[1.02]" data-alt="A focused shot of professional mechanical engineers in high-visibility safety gear and hard hats examining complex technical blueprints on a tablet within a modern industrial site. The lighting is crisp and bright, highlighting the technical details of the surrounding machinery and the serious, professional expressions of the team. The background shows blurred industrial equipment in navy and metallic tones." src="images/Service Image/HVAC/BG.jpg"/>
+</div>
+</div>
+</section>
+<!-- Engineering Process -->
+<section class="py-xl bg-surface-container-low">
+<div class="max-w-[1200px] mx-auto px-8">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Our Engineering Process</h2>
+<div class="w-24 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
+<!-- Card 1 -->
+<div class="bg-white p-6 rounded-lg border border-outline-variant shadow-sm hover:shadow-md transition-all transform duration-300 hover:-translate-y-1 group">
+<div class="text-secondary mb-4">
+<span class="material-symbols-outlined !text-4xl" data-icon="analytics">analytics</span>
+</div>
+<h3 class="font-headline-md text-body-md font-bold mb-2">Requirement Analysis</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Detailed study of project scope and operational needs.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-white p-6 rounded-lg border border-outline-variant shadow-sm hover:shadow-md transition-all transform duration-300 hover:-translate-y-1">
+<div class="text-secondary mb-4">
+<span class="material-symbols-outlined !text-4xl" data-icon="architecture">architecture</span>
+</div>
+<h3 class="font-headline-md text-body-md font-bold mb-2">Site Inspection</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Comprehensive on-ground evaluation of the facility.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-white p-6 rounded-lg border border-outline-variant shadow-sm hover:shadow-md transition-all transform duration-300 hover:-translate-y-1">
+<div class="text-secondary mb-4">
+<span class="material-symbols-outlined !text-4xl" data-icon="draw">draw</span>
+</div>
+<h3 class="font-headline-md text-body-md font-bold mb-2">Planning &amp; Design</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Engineering blueprints and material specification drafting.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-white p-6 rounded-lg border border-outline-variant shadow-sm hover:shadow-md transition-all transform duration-300 hover:-translate-y-1">
+<div class="text-secondary mb-4">
+<span class="material-symbols-outlined !text-4xl" data-icon="construction">construction</span>
+</div>
+<h3 class="font-headline-md text-body-md font-bold mb-2">Installation</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Professional execution by our certified technician team.</p>
+</div>
+<!-- Card 5 -->
+<div class="bg-white p-6 rounded-lg border border-outline-variant shadow-sm hover:shadow-md transition-all transform duration-300 hover:-translate-y-1">
+<div class="text-secondary mb-4">
+<span class="material-symbols-outlined !text-4xl" data-icon="fact_check">fact_check</span>
+</div>
+<h3 class="font-headline-md text-body-md font-bold mb-2">Testing</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Rigorous performance testing and safety certification.</p>
+</div>
+<!-- Card 6 -->
+<div class="bg-white p-6 rounded-lg border border-outline-variant shadow-sm hover:shadow-md transition-all transform duration-300 hover:-translate-y-1">
+<div class="text-secondary mb-4">
+<span class="material-symbols-outlined !text-4xl" data-icon="support_agent">support_agent</span>
+</div>
+<h3 class="font-headline-md text-body-md font-bold mb-2">Maintenance</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Ongoing support to ensure peak operational uptime.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Gallery (Masonry) -->
+<!-- Why Choose Helama -->
+<section class="py-xl bg-surface-container">
+<div class="max-w-[1200px] mx-auto px-8">
+<h2 class="font-headline-lg text-headline-lg text-primary text-center mb-16">Why Choose Helama Engineering</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Why 1 -->
+<div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 flex gap-6 hover:-translate-y-1 transition-transform">
+<div class="flex-shrink-0 w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-2">Expert Engineering Team</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Certified professionals with decades of cumulative industrial experience.</p>
+</div>
+</div>
+<!-- Why 2 -->
+<div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 flex gap-6 hover:-translate-y-1 transition-transform">
+<div class="flex-shrink-0 w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="verified">verified</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-2">Industry Standard Solutions</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">We adhere to the highest international safety and quality protocols.</p>
+</div>
+</div>
+<!-- Why 3 -->
+<div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 flex gap-6 hover:-translate-y-1 transition-transform">
+<div class="flex-shrink-0 w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-2">Fast Project Delivery</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Optimized workflows to ensure timely completion without quality compromise.</p>
+</div>
+</div>
+<!-- Why 4 -->
+<div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 flex gap-6 hover:-translate-y-1 transition-transform">
+<div class="flex-shrink-0 w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="high_quality">high_quality</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-2">Quality Assurance</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Multi-tier inspection phases for every single component installed.</p>
+</div>
+</div>
+<!-- Why 5 -->
+<div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 flex gap-6 hover:-translate-y-1 transition-transform">
+<div class="flex-shrink-0 w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-2">Affordable Pricing</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Transparent costs and value-driven engineering to fit project budgets.</p>
+</div>
+</div>
+<!-- Why 6 -->
+<div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 flex gap-6 hover:-translate-y-1 transition-transform">
+<div class="flex-shrink-0 w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-2">After-Sales Support</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Dedicated technical helpdesk available for long-term maintenance needs.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact CTA -->
+<section class="py-xl">
+<div class="max-w-[1200px] mx-auto px-8">
+<div class="relative bg-gradient-to-r from-primary to-secondary rounded-2xl p-12 overflow-hidden">
+<div class="absolute top-0 right-0 opacity-10">
+<span class="material-symbols-outlined !text-[200px]" data-icon="engineering">engineering</span>
+</div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="text-center md:text-left">
+<h2 class="text-white font-display text-headline-lg mb-2">Need Professional Engineering Solutions?</h2>
+<p class="text-white/80 text-body-lg">Consult with our lead engineers today for a customized project proposal.</p>
+</div>
+<div class="flex flex-wrap gap-4 justify-center">
+<button class="bg-white text-primary px-8 py-4 rounded font-label-sm hover:bg-surface-container-low transition-colors shadow-lg">Request Quote</button>
+<button class="border-2 border-white text-white px-8 py-4 rounded font-label-sm hover:bg-white/10 transition-colors">Contact Us</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-brand">
+                    <a href="index.html" class="logo footer-logo" aria-label="Helma Engineering home">
+                        <img class="logo-image" src="images/Company logo.jpeg" alt="Helma Engineering logo"
+                            loading="lazy" onerror="this.style.display='none';">
+                        <div class="logo-copy" style="align-items: flex-end;">
+                            <strong>Helma Engineering</strong>
+                            <span>Pvt. Ltd.</span>
+                        </div>
+                    </a>
+                    <p class="footer-description">
+                        Delivering world-class MEP and security engineering solutions with a commitment to excellence
+                        and innovation. Built on trust and technical precision.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://facebook.com/helmaengineering" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/helma-engineering" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://instagram.com/helmaengineering" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/923492333453" target="_blank" rel="noopener noreferrer"
+                            aria-label="WhatsApp" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-section-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="career.html">Career</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-section-title">Ecosystem</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#clients">Clients</a></li>
+                        <li><a href="index.html#partners">Partners</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                        <li><a href="services.html">All Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-section-title">Office</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p class="footer-contact-label">Address</p>
+                            <p class="footer-contact-text">3rd Floor, Plot 37, Wisteria Road, Sector A, DHA Phase 2,
+                                Islamabad, 45730</p>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p class="footer-contact-label">Email</p>
+                            <a href="mailto:info@helmaengineering.com"
+                                class="footer-contact-text">info@helmaengineering.com</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <p class="footer-contact-label">Phone</p>
+                            <a href="tel:+923492333453" class="footer-contact-text">+92 349 2333453</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="sub-content">
-                <h2><i class="fas fa-brain"></i> Artificial Intelligence</h2>
-                <p>Smart AI-driven solutions to automate processes and enhance decision-making.</p>
-                <ul class="sub-details-list">
-                    <li>Workflow Automation</li><li>Data Intelligence</li><li>Smart Monitoring</li><li>Decision Support</li>
-                </ul>
-            </div>
-        </article>
-        <article class="sub-category-block" id="digital-forensics" data-aos="fade-up">
-            <div class="sub-image-wrapper service-forensics">
-                <div class="swiper service-detail-swiper"><div class="swiper-wrapper"><div class="swiper-slide detail-slide">Forensics - Incident Analysis</div><div class="swiper-slide detail-slide">Forensics - Data Recovery</div><div class="swiper-slide detail-slide">Forensics - Evidence Preservation</div></div></div>
-            </div>
-            <div class="sub-content">
-                <h2><i class="fas fa-magnifying-glass-chart"></i> Digital Forensics</h2>
-                <p>Advanced investigation and data recovery services to secure and analyze digital evidence.</p>
-                <ul class="sub-details-list">
-                    <li>Evidence Collection</li><li>Threat Tracking</li><li>Data Validation</li><li>Compliance Reports</li>
-                </ul>
-            </div>
-        </article>
-        <article class="sub-category-block" id="access-control" data-aos="fade-up">
-            <div class="sub-image-wrapper service-access">
-                <div class="swiper service-detail-swiper"><div class="swiper-wrapper"><div class="swiper-slide detail-slide">Access - Card Authentication</div><div class="swiper-slide detail-slide">Access - Zone Control</div><div class="swiper-slide detail-slide">Access - Visitor Management</div></div></div>
-            </div>
-            <div class="sub-content">
-                <h2><i class="fas fa-id-card"></i> Access Control</h2>
-                <p>Secure and manage entry with intelligent access control systems for complete safety.</p>
-                <ul class="sub-details-list">
-                    <li>Biometric Access</li><li>Central Dashboard</li><li>Audit Logs</li><li>Door Automation</li>
-                </ul>
-            </div>
-        </article>
-        <article class="sub-category-block" id="cctv-system" data-aos="fade-up">
-            <div class="sub-image-wrapper service-cctv">
-                <div class="swiper service-detail-swiper"><div class="swiper-wrapper"><div class="swiper-slide detail-slide">CCTV - Live Monitoring</div><div class="swiper-slide detail-slide">CCTV - Video Analytics</div><div class="swiper-slide detail-slide">CCTV - Incident Playback</div></div></div>
-            </div>
-            <div class="sub-content">
-                <h2><i class="fas fa-video"></i> CCTV System</h2>
-                <p>24/7 surveillance solutions to monitor, protect, and ensure peace of mind.</p>
-                <ul class="sub-details-list">
-                    <li>IP Cameras</li><li>NVR Integration</li><li>Remote Viewing</li><li>Retention Policies</li>
-                </ul>
-            </div>
-        </article>
-        <article class="sub-category-block" id="mep" data-aos="fade-up">
-            <div class="sub-image-wrapper service-mep">
-                <div class="swiper service-detail-swiper"><div class="swiper-wrapper"><div class="swiper-slide detail-slide">MEP - Power Systems</div><div class="swiper-slide detail-slide">MEP - Mechanical Integration</div><div class="swiper-slide detail-slide">MEP - Civil Coordination</div></div></div>
-            </div>
-            <div class="sub-content">
-                <h2><i class="fas fa-screwdriver-wrench"></i> MEP</h2>
-                <p>Comprehensive engineering solutions for efficient and reliable infrastructure.</p>
-                <ul class="sub-details-list">
-                    <li>Electrical Design</li><li>Mechanical Systems</li><li>Civil Coordination</li><li>Execution Support</li>
-                </ul>
-            </div>
-        </article>
-        <article class="sub-category-block" id="public-address" data-aos="fade-up">
-            <div class="sub-image-wrapper service-pa">
-                <div class="swiper service-detail-swiper"><div class="swiper-wrapper"><div class="swiper-slide detail-slide">PA - Voice Coverage</div><div class="swiper-slide detail-slide">PA - Emergency Broadcast</div><div class="swiper-slide detail-slide">PA - Zone Messaging</div></div></div>
-            </div>
-            <div class="sub-content">
-                <h2><i class="fas fa-bullhorn"></i> Public Address System</h2>
-                <p>Clear and effective communication systems for announcements and emergencies.</p>
-                <ul class="sub-details-list">
-                    <li>Voice Evacuation</li><li>Digital Amplifiers</li><li>Smart Paging</li><li>Audio Zoning</li>
-                </ul>
-            </div>
-        </article>
-        <article class="sub-category-block" id="hvac" data-aos="fade-up">
-            <div class="sub-image-wrapper service-hvac">
-                <div class="swiper service-detail-swiper"><div class="swiper-wrapper"><div class="swiper-slide detail-slide">HVAC - Cooling Plants</div><div class="swiper-slide detail-slide">HVAC - Ventilation Systems</div><div class="swiper-slide detail-slide">HVAC - Energy Balancing</div></div></div>
-            </div>
-            <div class="sub-content">
-                <h2><i class="fas fa-wind"></i> HVAC</h2>
-                <p>Energy-efficient climate control systems for maximum comfort and performance.</p>
-                <ul class="sub-details-list">
-                    <li>Ducting Design</li><li>Chilled Water</li><li>Air Quality</li><li>Maintenance Plans</li>
-                </ul>
-            </div>
-        </article>
-        <article class="sub-category-block" id="fire-alarm" data-aos="fade-up">
-            <div class="sub-image-wrapper service-fire-alarm">
-                <div class="swiper service-detail-swiper"><div class="swiper-wrapper"><div class="swiper-slide detail-slide">Fire Alarm - Sensors</div><div class="swiper-slide detail-slide">Fire Alarm - Control Panels</div><div class="swiper-slide detail-slide">Fire Alarm - Monitoring</div></div></div>
-            </div>
-            <div class="sub-content">
-                <h2><i class="fas fa-bell"></i> Fire Alarm System</h2>
-                <p>Early detection systems designed to protect lives and property from fire hazards.</p>
-                <ul class="sub-details-list">
-                    <li>Detector Networks</li><li>Fire Panels</li><li>Alert Routing</li><li>Code Compliance</li>
-                </ul>
-            </div>
-        </article>
-        <article class="sub-category-block" id="fire-fighting" data-aos="fade-up">
-            <div class="sub-image-wrapper service-fire-fighting">
-                <div class="swiper service-detail-swiper"><div class="swiper-wrapper"><div class="swiper-slide detail-slide">Fire Fighting - Hydrants</div><div class="swiper-slide detail-slide">Fire Fighting - Suppression</div><div class="swiper-slide detail-slide">Fire Fighting - Pump Rooms</div></div></div>
-            </div>
-            <div class="sub-content">
-                <h2><i class="fas fa-fire-extinguisher"></i> Fire Fighting System</h2>
-                <p>Robust fire suppression solutions ensuring rapid response and safety compliance.</p>
-                <ul class="sub-details-list">
-                    <li>Sprinkler Systems</li><li>Hydrant Systems</li><li>Suppression Agents</li><li>Commissioning</li>
-                </ul>
-            </div>
-        </article>
-        <article class="sub-category-block" id="intruder-alarm" data-aos="fade-up">
-            <div class="sub-image-wrapper service-intruder">
-                <div class="swiper service-detail-swiper"><div class="swiper-wrapper"><div class="swiper-slide detail-slide">Intruder - Motion Sensing</div><div class="swiper-slide detail-slide">Intruder - Alerting</div><div class="swiper-slide detail-slide">Intruder - Monitoring</div></div></div>
-            </div>
-            <div class="sub-content">
-                <h2><i class="fas fa-shield-halved"></i> Intruder Alarm</h2>
-                <p>Advanced alarm systems to detect unauthorized access and prevent security breaches.</p>
-                <ul class="sub-details-list">
-                    <li>Perimeter Security</li><li>Motion Detection</li><li>Central Alerts</li><li>Response Integration</li>
-                </ul>
-            </div>
-        </article>
-    </section>
-
-    <a class="whatsapp-float" href="https://wa.me/923492333453" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp" aria-hidden="true"></i>
-        <span>WhatsApp</span>
-    </a>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
-                <p>&copy; 2026 Helma Engineering Pvt Ltd. All Rights Reserved.</p>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">&copy; 2026 Helma Engineering Pvt Ltd. All Rights Reserved.</p>
+                    <div class="footer-policies">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
-</body>
-</html>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const services = {
+                hvac: {
+                    title: 'HVAC Systems',
+                    shortTitle: 'Energy-efficient indoor climate control solutions |',
+                    description: 'End-to-end HVAC engineering and installation for commercial, industrial, and institutional buildings.',
+                    detail: 'We design and install efficient climate control systems that balance comfort, compliance, and energy savings with smart controls, ductwork, and service planning.',
+                    image: 'images/Service Image/HVAC/BG.jpg'
+                },
+                cctv: {
+                    title: 'CCTV Systems',
+                    shortTitle: 'Smart surveillance and 24/7 visibility |',
+                    description: 'High-definition CCTV networks designed to protect people, assets, and operations in real time.',
+                    detail: 'Our CCTV solutions include camera placement, recording systems, and intelligent monitoring so every area remains visible and secure.',
+                    image: 'images/Service Image/CCTV System/BG.jpg'
+                },
+                'fire-alarm': {
+                    title: 'Fire Alarm Systems',
+                    shortTitle: 'Early-warning detection for life safety |',
+                    description: 'Advanced fire detection systems engineered for fast response and regulatory compliance.',
+                    detail: 'We specify addressable detectors, notification appliances, and monitoring interfaces that keep occupants safe and facilities protected.',
+                    image: 'images/Service Image/Fire Alarm System/BG.jpg'
+                },
+                'fire-fighting': {
+                    title: 'Fire Fighting Systems',
+                    shortTitle: 'Rapid suppression systems for critical environments |',
+                    description: 'Complete fire fighting system design and installation for reliable hazard control.',
+                    detail: 'From pump room design to sprinkler layout, we create solutions that ensure rapid response and ongoing system readiness.',
+                    image: 'images/Service Image/Fire Fighting System/BG.jpg'
+                },
+                'intruder-alarm': {
+                    title: 'Intruder Alarm Systems',
+                    shortTitle: 'Perimeter security and unauthorized access alerts |',
+                    description: 'Integrated intrusion detection systems for buildings and restricted areas.',
+                    detail: 'We deploy motion sensors, door contacts, and alarm control panels to provide immediate notification of security breaches.',
+                    image: 'images/Service Image/Intruder Alarm/BG.jpg'
+                },
+                'public-address': {
+                    title: 'Public Address Systems',
+                    shortTitle: 'Clear audio distribution for announcements and emergencies |',
+                    description: 'Reliable PA systems tailored for effective communication across any facility.',
+                    detail: 'Our designs ensure every message is heard clearly across zones, with emergency paging and event announcement capabilities.',
+                    image: 'images/Service Image/Public Address System/BG.jpg'
+                },
+                'access-control': {
+                    title: 'Access Control',
+                    shortTitle: 'Secure entry management with intelligent control |',
+                    description: 'Access control systems that manage who enters your facility and when.',
+                    detail: 'We integrate card readers, biometric devices, and secure doors to protect people and assets while preserving operational flow.',
+                    image: 'images/Service Image/Access ContrHero/BG.jpg'
+                },
+                'digital-forensics': {
+                    title: 'Digital Forensics',
+                    shortTitle: 'Evidence-led cyber investigation services |',
+                    description: 'Specialized digital forensics that preserve evidence and uncover incident details.',
+                    detail: 'Our team analyzes data, devices, and network events to support investigations with accurate technical findings.',
+                    image: 'images/Service Image/Digital Forensics/BG.jpg'
+                },
+                'artificial-intelligence': {
+                    title: 'Artificial Intelligence',
+                    shortTitle: 'Smart automation and predictive decision-making |',
+                    description: 'AI-powered systems that improve efficiency, safety, and asset management.',
+                    detail: 'We deliver intelligent workflows, predictive analytics, and automation platforms that make operations smarter and more responsive.',
+                    image: 'images/Service Image/Artificial Intelligence/BG.jpg'
+                },
+                mep: {
+                    title: 'MEP Engineering',
+                    shortTitle: 'Complete mechanical, electrical, and plumbing support |',
+                    description: 'Integrated MEP systems for buildings, infrastructure, and industrial projects.',
+                    detail: 'Our team delivers coordinated HVAC, electrical, plumbing, and fire protection systems that perform seamlessly across the built environment.',
+                    image: 'images/Service Image/MEP Engineering/BG.jpg'
+                }
+            };
+
+            const heroBackground = document.getElementById('hero-background');
+            const serviceTitle = document.getElementById('service-title');
+            const serviceShortTitle = document.getElementById('service-short-title');
+            const serviceHeading = document.getElementById('service-description-heading');
+            const serviceDescription = document.getElementById('service-description');
+            const serviceDetail = document.getElementById('service-detail-description');
+            const serviceImage = document.getElementById('service-detail-image');
+            const buttons = document.querySelectorAll('[data-service-key]');
+
+            const hashMap = {
+                '#ai': 'artificial-intelligence',
+                '#cctv-system': 'cctv',
+                '#public-address': 'public-address',
+                '#access-control': 'access-control',
+                '#digital-forensics': 'digital-forensics',
+                '#fire-alarm': 'fire-alarm',
+                '#fire-fighting': 'fire-fighting',
+                '#intruder-alarm': 'intruder-alarm',
+                '#mep': 'mep',
+                '#hvac': 'hvac',
+                '#artificial-intelligence': 'artificial-intelligence'
+            };
+
+            const getServiceFromHash = () => {
+                const hash = window.location.hash.toLowerCase();
+                return hashMap[hash] || hash.replace('#', '') || 'hvac';
+            };
+
+            const setService = (key) => {
+                const service = services[key];
+                if (!service) {
+                    return;
+                }
+
+                buttons.forEach((button) => {
+                    button.classList.toggle('active', button.dataset.serviceKey === key);
+                });
+
+                heroBackground.src = service.image;
+                heroBackground.alt = `${service.title} background`;
+                serviceTitle.textContent = service.title;
+                serviceShortTitle.textContent = service.shortTitle;
+                serviceHeading.textContent = 'Description';
+                serviceDescription.textContent = service.description;
+                serviceDetail.textContent = service.detail;
+                serviceImage.src = service.image;
+                serviceImage.alt = `${service.title} engineering visual`;
+            };
+
+            buttons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    const key = button.dataset.serviceKey;
+                    window.location.hash = key;
+                    setService(key);
+                });
+            });
+
+            window.addEventListener('hashchange', () => setService(getServiceFromHash()));
+            setService(getServiceFromHash());
+        });
+    </script>
+</body></html>
