@@ -1,91 +1,488 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html class="light" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers - Helma Engineering Pvt Ltd</title>
-    <meta name="description" content="Join Helma Engineering. Explore openings and submit your application with resume upload.">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Careers | Helma Engineering</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-error-container": "#93000a",
+            "surface-container": "#eaedff",
+            "secondary-container": "#d3e2ed",
+            "background": "#faf8ff",
+            "primary-fixed-dim": "#b2c5ff",
+            "inverse-on-surface": "#eef0ff",
+            "secondary-fixed": "#d6e5ef",
+            "on-error": "#ffffff",
+            "on-secondary-container": "#56656e",
+            "on-surface": "#151b2d",
+            "on-primary-fixed": "#001848",
+            "on-background": "#151b2d",
+            "inverse-surface": "#2a3042",
+            "secondary-fixed-dim": "#bac9d3",
+            "outline-variant": "#c3c6d6",
+            "surface-tint": "#0c56d0",
+            "primary-container": "#0052cc",
+            "outline": "#737685",
+            "on-secondary-fixed-variant": "#3b4951",
+            "surface": "#faf8ff",
+            "tertiary-fixed": "#e0e3e5",
+            "surface-bright": "#faf8ff",
+            "inverse-primary": "#b2c5ff",
+            "error": "#ba1a1a",
+            "surface-container-high": "#e2e7ff",
+            "surface-container-highest": "#dce2fa",
+            "tertiary": "#404445",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-fixed": "#191c1e",
+            "tertiary-fixed-dim": "#c4c7c9",
+            "on-tertiary-container": "#d1d3d5",
+            "on-primary-fixed-variant": "#0040a2",
+            "tertiary-container": "#585b5d",
+            "primary": "#003d9b",
+            "on-primary-container": "#c4d2ff",
+            "surface-container-lowest": "#ffffff",
+            "primary-fixed": "#dae2ff",
+            "on-secondary-fixed": "#0f1d25",
+            "surface-dim": "#d4d9f2",
+            "secondary": "#526069",
+            "surface-container-low": "#f2f3ff",
+            "on-secondary": "#ffffff",
+            "surface-variant": "#dce2fa",
+            "error-container": "#ffdad6",
+            "on-tertiary-fixed-variant": "#444749",
+            "on-primary": "#ffffff",
+            "on-surface-variant": "#434654"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "lg": "24px",
+            "container-max": "1440px",
+            "sm": "8px",
+            "margin": "32px",
+            "gutter": "24px",
+            "md": "16px",
+            "unit": "4px",
+            "xl": "48px",
+            "xs": "4px"
+          },
+          "fontFamily": {
+            "h1": ["Space Grotesk"],
+            "body-lg": ["Inter"],
+            "h3": ["Space Grotesk"],
+            "body-md": ["Inter"],
+            "h2": ["Space Grotesk"],
+            "body-sm": ["Inter"],
+            "label-caps": ["Inter"]
+          },
+          "fontSize": {
+            "h1": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+            "h3": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+            "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+            "h2": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+            "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    body {
+      background-color: #faf8ff;
+      color: #151b2d;
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
 </head>
-<body>
-    <nav id="navbar" class="navbar scrolled">
-        <div class="container nav-container">
-            <a href="index.html" class="logo" aria-label="Helma Engineering home">
-                <img class="logo-image" src="Company logo/logo.png" alt="Helma Engineering logo" loading="lazy" onerror="this.style.display='none';">
-                <span class="logo-copy">
-                    <strong>Helma Engineering</strong>
-                    <small>Helma Engineering Pvt Ltd</small>
-                </span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="career.html" style="color: var(--accent-color);">Career</a></li>
-                <li><a href="index.html#clients">Clients</a></li>
-                <li><a href="index.html#partners">Partners</a></li>
-                <li><a href="index.html#contact" class="btn-outline">Contact Us</a></li>
-            </ul>
-            <button class="hamburger" type="button" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
 
-    <header class="page-header">
-        <div class="container" data-aos="fade-up">
-            <h1 class="hero-title services-header-title">Careers at Helma Engineering</h1>
-            <p class="hero-tagline page-tagline">Build your future with a team that delivers trusted engineering outcomes.</p>
+<body class="bg-background text-on-background">
+  <!-- NAV -->
+  <nav id="navbar" class="navbar scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="Helma Engineering home">
+        <img class="logo-image" src="images/Company logo.jpeg" alt="Helma Engineering logo" loading="lazy"
+          onerror="this.style.display='none';">
+        <span class="logo-copy">
+          <strong>Helma Engineering Pvt Ltd</strong>
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="career.html" style="color: var(--accent-color);">Career</a></li>
+        <li><a href="index.html#clients">Clients</a></li>
+        <li><a href="index.html#partners">Partners</a></li>
+        <li><a href="index.html#contact" class="btn-outline">Contact Us</a></li>
+      </ul>
+      <button class="hamburger" type="button" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+  <main class="pt-20">
+    <!-- Hero Section -->
+    <section class="relative h-[80vh] flex items-center overflow-hidden bg-surface-container-low">
+      <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-xl items-center relative z-10">
+        <div class="space-y-md">
+          <span class="text-primary font-label-caps tracking-widest uppercase">Careers at Helma</span>
+          <h1 class="font-h1 text-h1 text-on-surface">Build the Future of Engineering Precision</h1>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            Join a team of elite engineers dedicated to solving the world's most complex structural and systems
+            challenges. At Helma, precision isn't just a goal; it's our heritage.
+          </p>
+          <div class="flex gap-md pt-sm">
+            <a class="bg-primary text-white px-8 py-4 rounded-lg font-h3 text-md hover:shadow-lg transition-all"
+              href="#positions">View Openings</a>
+            <a class="border border-outline text-on-surface px-8 py-4 rounded-lg font-h3 text-md hover:bg-white transition-all"
+              href="#process">Our Process</a>
+          </div>
         </div>
-    </header>
-
-    <main class="section">
-        <div class="container">
-            <section class="career-grid" data-aos="fade-up">
-                <div class="career-listings glass-card">
-                    <h2>Open Positions</h2>
-                    <p class="section-desc left-text">This section is ready for dynamic integration from ATS or API sources.</p>
-                    <div class="job-item">
-                        <h3>MEP Site Engineer</h3>
-                        <p>Islamabad | Full-time</p>
-                    </div>
-                    <div class="job-item">
-                        <h3>Security Systems Engineer (ELV)</h3>
-                        <p>Islamabad | Full-time</p>
-                    </div>
-                    <div class="job-item">
-                        <h3>Project Coordinator</h3>
-                        <p>Islamabad | Full-time</p>
-                    </div>
+        <div class="relative">
+          <div class="rounded-xl overflow-hidden shadow-2xl border-4 border-white">
+            <img alt="Engineering Collaboration" class="w-full h-auto object-cover"
+              src="images/Company logo.jpeg" />
+          </div>
+          <div
+            class="absolute -bottom-8 -left-8 bg-white p-lg rounded-xl shadow-lg border border-outline-variant max-w-xs">
+            <p class="font-h3 text-primary text-h3 mb-1">98%</p>
+            <p class="font-body-sm text-on-surface-variant">Retention rate among our senior engineering leadership.</p>
+          </div>
+        </div>
+      </div>
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary-fixed-dim to-transparent"></div>
+      </div>
+    </section>
+    <!-- Why Work With Us Section -->
+    <section class="py-xl bg-white">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="text-center mb-xl">
+          <h2 class="font-h2 text-h2 text-on-surface mb-md">Engineering Excellence, Cultivated</h2>
+          <p class="font-body-md text-on-surface-variant max-w-2xl mx-auto">
+            We provide an environment where technical mastery is recognized and innovative thinking is the standard
+            operating procedure.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+          <div class="p-lg rounded-xl border border-outline-variant hover:shadow-md transition-all group">
+            <div
+              class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center mb-md group-hover:bg-primary-fixed transition-colors">
+              <span class="material-symbols-outlined text-primary">architecture</span>
+            </div>
+            <h3 class="font-h3 text-h3 mb-sm">Cutting-Edge Tech</h3>
+            <p class="font-body-md text-on-surface-variant">Access to the latest in CAD, BIM, and proprietary simulation
+              software to push the boundaries of design.</p>
+          </div>
+          <div class="p-lg rounded-xl border border-outline-variant hover:shadow-md transition-all group">
+            <div
+              class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center mb-md group-hover:bg-primary-fixed transition-colors">
+              <span class="material-symbols-outlined text-primary">groups</span>
+            </div>
+            <h3 class="font-h3 text-h3 mb-sm">Expert Mentorship</h3>
+            <p class="font-body-md text-on-surface-variant">Work alongside industry titans who have led some of the most
+              significant infrastructure projects globally.</p>
+          </div>
+          <div class="p-lg rounded-xl border border-outline-variant hover:shadow-md transition-all group">
+            <div
+              class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center mb-md group-hover:bg-primary-fixed transition-colors">
+              <span class="material-symbols-outlined text-primary">balance</span>
+            </div>
+            <h3 class="font-h3 text-h3 mb-sm">Holistic Growth</h3>
+            <p class="font-body-md text-on-surface-variant">A professional environment that balances high-stakes
+              delivery with career-long learning and personal well-being.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Open Positions Grid -->
+    <section class="py-xl bg-surface-container-low" id="positions">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="flex justify-between items-end mb-xl">
+          <div>
+            <h2 class="font-h2 text-h2 text-on-surface">Open Positions</h2>
+            <p class="font-body-md text-on-surface-variant mt-sm">Find your next challenge in our specialized
+              engineering departments.</p>
+          </div>
+          <div class="hidden md:block">
+            <span class="bg-primary-fixed text-primary px-4 py-2 rounded-full font-label-caps">6 Active Roles</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+          <!-- Position 1 -->
+          <div
+            class="bg-white p-lg rounded-xl border border-outline-variant shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-md">
+                <span
+                  class="bg-surface-container text-primary text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-tighter">Electrical</span>
+                <span class="text-on-surface-variant text-sm flex items-center gap-1"><span
+                    class="material-symbols-outlined text-sm">location_on</span>London, UK</span>
+              </div>
+              <h4 class="font-h3 text-lg mb-sm">Electrical Engineer</h4>
+              <p class="font-body-sm text-on-surface-variant mb-md">Designing complex power distribution systems for
+                Tier-1 commercial infrastructure projects.</p>
+            </div>
+            <button
+              class="w-full py-3 text-primary border border-primary rounded-lg font-h3 text-sm hover:bg-primary hover:text-white transition-all">Apply
+              Now</button>
+          </div>
+          <!-- Position 2 -->
+          <div
+            class="bg-white p-lg rounded-xl border border-outline-variant shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-md">
+                <span
+                  class="bg-surface-container text-primary text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-tighter">Mechanical</span>
+                <span class="text-on-surface-variant text-sm flex items-center gap-1"><span
+                    class="material-symbols-outlined text-sm">location_on</span>Berlin, GER</span>
+              </div>
+              <h4 class="font-h3 text-lg mb-sm">HVAC Engineer</h4>
+              <p class="font-body-sm text-on-surface-variant mb-md">Leading climate control innovations for
+                high-efficiency, sustainable building designs.</p>
+            </div>
+            <button
+              class="w-full py-3 text-primary border border-primary rounded-lg font-h3 text-sm hover:bg-primary hover:text-white transition-all">Apply
+              Now</button>
+          </div>
+          <!-- Position 3 -->
+          <div
+            class="bg-white p-lg rounded-xl border border-outline-variant shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-md">
+                <span
+                  class="bg-surface-container text-primary text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-tighter">Management</span>
+                <span class="text-on-surface-variant text-sm flex items-center gap-1"><span
+                    class="material-symbols-outlined text-sm">location_on</span>Dubai, UAE</span>
+              </div>
+              <h4 class="font-h3 text-lg mb-sm">Project Manager</h4>
+              <p class="font-body-sm text-on-surface-variant mb-md">Overseeing multidisciplinary teams to deliver
+                engineering excellence on time and on budget.</p>
+            </div>
+            <button
+              class="w-full py-3 text-primary border border-primary rounded-lg font-h3 text-sm hover:bg-primary hover:text-white transition-all">Apply
+              Now</button>
+          </div>
+          <!-- Position 4 -->
+          <div
+            class="bg-white p-lg rounded-xl border border-outline-variant shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-md">
+                <span
+                  class="bg-surface-container text-primary text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-tighter">Security</span>
+                <span class="text-on-surface-variant text-sm flex items-center gap-1"><span
+                    class="material-symbols-outlined text-sm">location_on</span>Singapore</span>
+              </div>
+              <h4 class="font-h3 text-lg mb-sm">Security Systems Engineer</h4>
+              <p class="font-body-sm text-on-surface-variant mb-md">Developing integrated security protocols for
+                mission-critical industrial facilities.</p>
+            </div>
+            <button
+              class="w-full py-3 text-primary border border-primary rounded-lg font-h3 text-sm hover:bg-primary hover:text-white transition-all">Apply
+              Now</button>
+          </div>
+          <!-- Position 5 -->
+          <div
+            class="bg-white p-lg rounded-xl border border-outline-variant shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-md">
+                <span
+                  class="bg-surface-container text-primary text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-tighter">Growth</span>
+                <span class="text-on-surface-variant text-sm flex items-center gap-1"><span
+                    class="material-symbols-outlined text-sm">location_on</span>New York, USA</span>
+              </div>
+              <h4 class="font-h3 text-lg mb-sm">Sales Executive</h4>
+              <p class="font-body-sm text-on-surface-variant mb-md">Expanding Helma's footprint by building strategic
+                partnerships with global developers.</p>
+            </div>
+            <button
+              class="w-full py-3 text-primary border border-primary rounded-lg font-h3 text-sm hover:bg-primary hover:text-white transition-all">Apply
+              Now</button>
+          </div>
+          <!-- Position 6 -->
+          <div
+            class="bg-white p-lg rounded-xl border border-outline-variant shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-md">
+                <span
+                  class="bg-surface-container text-primary text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-tighter">Digital</span>
+                <span class="text-on-surface-variant text-sm flex items-center gap-1"><span
+                    class="material-symbols-outlined text-sm">location_on</span>Remote</span>
+              </div>
+              <h4 class="font-h3 text-lg mb-sm">Software Engineer</h4>
+              <p class="font-body-sm text-on-surface-variant mb-md">Building the next generation of predictive
+                engineering analysis tools and digital twins.</p>
+            </div>
+            <button
+              class="w-full py-3 text-primary border border-primary rounded-lg font-h3 text-sm hover:bg-primary hover:text-white transition-all">Apply
+              Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hiring Process Timeline -->
+    <section class="py-xl bg-white overflow-hidden" id="process">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+          <div>
+            <h2 class="font-h2 text-h2 text-on-surface mb-lg">Our Hiring Process</h2>
+            <div class="space-y-lg relative">
+              <div class="absolute left-[23px] top-4 bottom-4 w-0.5 bg-secondary-container"></div>
+              <div class="flex gap-lg relative">
+                <div
+                  class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold z-10 shrink-0 shadow-md">
+                  1</div>
+                <div>
+                  <h4 class="font-h3 text-lg mb-1">Application Review</h4>
+                  <p class="font-body-sm text-on-surface-variant">Our technical leads personally review every
+                    engineering submission for precision and alignment with our standards.</p>
                 </div>
-
-                <div class="career-apply glass-card" data-aos="fade-left">
-                    <h2>Apply Now</h2>
-                    <form id="career-form" class="contact-form" enctype="multipart/form-data">
-                        <div class="form-group"><input type="text" name="fullName" placeholder="Full Name" required></div>
-                        <div class="form-group"><input type="email" name="email" placeholder="Email Address" required></div>
-                        <div class="form-group"><input type="text" name="position" placeholder="Position Applied For" required></div>
-                        <div class="form-group">
-                            <label class="upload-label" for="resume">Upload Resume (PDF/DOC)</label>
-                            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Submit Application <i class="fas fa-upload"></i></button>
-                    </form>
+              </div>
+              <div class="flex gap-lg relative">
+                <div
+                  class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold z-10 shrink-0 shadow-md">
+                  2</div>
+                <div>
+                  <h4 class="font-h3 text-lg mb-1">Technical Assessment</h4>
+                  <p class="font-body-sm text-on-surface-variant">A deep-dive into your engineering methodology through
+                    a real-world scenario or peer-review session.</p>
                 </div>
-            </section>
+              </div>
+              <div class="flex gap-lg relative">
+                <div
+                  class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold z-10 shrink-0 shadow-md">
+                  3</div>
+                <div>
+                  <h4 class="font-h3 text-lg mb-1">Values Interview</h4>
+                  <p class="font-body-sm text-on-surface-variant">Meeting the team you'll be working with to ensure a
+                    mutual cultural and professional fit.</p>
+                </div>
+              </div>
+              <div class="flex gap-lg relative">
+                <div
+                  class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold z-10 shrink-0 shadow-md">
+                  4</div>
+                <div>
+                  <h4 class="font-h3 text-lg mb-1">Final Selection</h4>
+                  <p class="font-body-sm text-on-surface-variant">Onboarding and welcome to the Helma Engineering
+                    ecosystem.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <img src="images/Career.jpg" alt="Professional Career at Helma" class="rounded-xl shadow-md w-full h-full max-h-[600px] object-cover mt-lg lg:mt-0">
+          </div>
         </div>
-    </main>
-
-    <footer class="footer">
-        <div class="container footer-bottom">
-            <p>&copy; 2026 Helma Engineering Pvt Ltd. All Rights Reserved.</p>
+      </div>
+    </section>
+    <!-- Apply Now Form Section -->
+    <section class="py-xl bg-surface-container-low">
+      <div class="max-w-4xl mx-auto px-8">
+        <div class="bg-white rounded-xl shadow-xl border border-outline-variant overflow-hidden">
+          <div class="bg-primary p-lg text-white">
+            <h2 class="font-h2 text-h2 mb-2">Apply for a Future at Helma</h2>
+            <p class="font-body-md opacity-90">Please complete the form below. Our talent acquisition team will review
+              your application within 3-5 business days.</p>
+          </div>
+          <form class="p-lg grid grid-cols-1 md:grid-cols-2 gap-lg">
+            <div class="space-y-sm">
+              <label class="font-label-caps text-on-surface">Full Name</label>
+              <input
+                class="w-full bg-white border border-outline-variant rounded-lg p-3 focus:border-primary focus:ring-2 focus:ring-secondary-container transition-all"
+                placeholder="John Doe" type="text" />
+            </div>
+            <div class="space-y-sm">
+              <label class="font-label-caps text-on-surface">Email Address</label>
+              <input
+                class="w-full bg-white border border-outline-variant rounded-lg p-3 focus:border-primary focus:ring-2 focus:ring-secondary-container transition-all"
+                placeholder="john.doe@engineering.com" type="email" />
+            </div>
+            <div class="space-y-sm">
+              <label class="font-label-caps text-on-surface">Position of Interest</label>
+              <select
+                class="w-full bg-white border border-outline-variant rounded-lg p-3 focus:border-primary focus:ring-2 focus:ring-secondary-container transition-all">
+                <option>Electrical Engineer</option>
+                <option>HVAC Engineer</option>
+                <option>Project Manager</option>
+                <option>Security Systems Engineer</option>
+                <option>Sales Executive</option>
+                <option>Software Engineer</option>
+              </select>
+            </div>
+            <div class="space-y-sm">
+              <label class="font-label-caps text-on-surface">LinkedIn Profile URL</label>
+              <input
+                class="w-full bg-white border border-outline-variant rounded-lg p-3 focus:border-primary focus:ring-2 focus:ring-secondary-container transition-all"
+                placeholder="https://linkedin.com/in/..." type="url" />
+            </div>
+            <div class="md:col-span-2 space-y-sm">
+              <label class="font-label-caps text-on-surface">Resume Upload (PDF/DOCX)</label>
+              <div
+                class="border-2 border-dashed border-outline-variant rounded-lg p-xl text-center bg-background hover:bg-surface-container transition-all cursor-pointer">
+                <span class="material-symbols-outlined text-4xl text-outline mb-sm">upload_file</span>
+                <p class="text-on-surface-variant font-body-sm">Drag and drop your resume or <span
+                    class="text-primary font-bold">browse files</span></p>
+              </div>
+            </div>
+            <div class="md:col-span-2 space-y-sm">
+              <label class="font-label-caps text-on-surface">Brief Professional Intro</label>
+              <textarea
+                class="w-full bg-white border border-outline-variant rounded-lg p-3 focus:border-primary focus:ring-2 focus:ring-secondary-container transition-all"
+                placeholder="Tell us what drives your passion for engineering precision..." rows="4"></textarea>
+            </div>
+            <div class="md:col-span-2">
+              <button
+                class="w-full bg-primary text-white py-4 rounded-lg font-h3 text-md hover:bg-primary-container transition-all shadow-md"
+                type="submit">Submit Application</button>
+            </div>
+          </form>
         </div>
-    </footer>
+      </div>
+    </section>
+  </main>
+  <a class="whatsapp-float" href="https://wa.me/923492333453" target="_blank" rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    <span>WhatsApp</span>
+  </a>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/script.js"></script>
+  <footer class="footer">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Helma Engineering Pvt Ltd. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
+
 </html>
