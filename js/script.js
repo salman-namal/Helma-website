@@ -55,6 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 effect: 'fade',
                 autoplay: { delay: 4500, disableOnInteraction: false },
                 pagination: { el: '.hero-swiper .swiper-pagination', clickable: true },
+                navigation: {
+                    nextEl: '.hero-swiper .swiper-button-next',
+                    prevEl: '.hero-swiper .swiper-button-prev',
+                },
                 on: {
                     init(swiper) {
                         typeHeroTagline(swiper.slides[swiper.activeIndex]);
@@ -341,3 +345,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
     loadPartnerLogos();
 });
+
+// Slider functionality
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+const indicators = document.querySelectorAll('.indicator');
+let currentIndex = 0;
+let autoSlideInterval;
+
+function showSlide(index) {
+    const slidesContainer = document.querySelector('.slides');
+    slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+    indicators.forEach((ind, i) => ind.classList.toggle('active', i === index));
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+}
+
+function goToSlide(index) {
+    currentIndex = index;
+    showSlide(currentIndex);
+}
+
+if (prevBtn && nextBtn && indicators.length) {
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+    indicators.forEach((ind, i) => {
+        ind.addEventListener('click', () => goToSlide(i));
+    });
+
+    // Auto rotate
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, 3000); // 3 seconds
+    }
+
+    function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+    }
+
+    // Start auto slide
+    startAutoSlide();
+
+    // Pause on hover
+    const sliderContainer = document.querySelector('.slider-container');
+    if (sliderContainer) {
+        sliderContainer.addEventListener('mouseenter', stopAutoSlide);
+        sliderContainer.addEventListener('mouseleave', startAutoSlide);
+    }
+}
+
+

@@ -1590,3 +1590,55 @@ h4 {
         max-height: 55px;
     }
 }
+
+/* Slider Styles */
+.slider-container .slides {
+    display: flex;
+}
+
+.slider-container .slide {
+    min-width: 100%;
+}
+
+.slider-container .indicator {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.slider-container .indicator.active {
+    background-color: white;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 30;
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    animation: simpleBounce 2s infinite ease-in-out;
+}
+
+.scroll-indicator:hover {
+    opacity: 1;
+}
+
+.scroll-indicator i {
+    font-size: 32px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+@keyframes simpleBounce {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, -15px); }
+}
+
+/* Globe Responsive */
+@media (max-width: 1024px) {
+    #hero-globe {
+        display: none !important;
+    }
+}

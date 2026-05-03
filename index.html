@@ -12,6 +12,100 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+      tailwind.config = {
+        corePlugins: { preflight: false },
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#2d476f",
+                    "surface-bright": "#faf9fd",
+                    "primary": "#002045",
+                    "surface-container-highest": "#e3e2e6",
+                    "secondary-fixed-dim": "#a2c9ff",
+                    "on-surface-variant": "#43474e",
+                    "inverse-primary": "#adc7f7",
+                    "on-secondary-fixed": "#001c38",
+                    "surface-container-high": "#e9e7eb",
+                    "on-tertiary-fixed-variant": "#41474e",
+                    "surface-variant": "#e3e2e6",
+                    "secondary-fixed": "#d3e4ff",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container": "#efedf1",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#faf9fd",
+                    "on-primary-fixed": "#001b3c",
+                    "tertiary": "#1b2127",
+                    "on-tertiary-fixed": "#161c22",
+                    "primary-fixed": "#d6e3ff",
+                    "outline": "#74777f",
+                    "primary-fixed-dim": "#adc7f7",
+                    "surface-tint": "#455f88",
+                    "on-secondary-container": "#00477f",
+                    "tertiary-container": "#30363c",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#dde3eb",
+                    "on-background": "#1a1c1e",
+                    "error-container": "#ffdad6",
+                    "inverse-surface": "#2f3033",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#dad9dd",
+                    "inverse-on-surface": "#f1f0f4",
+                    "on-secondary-fixed-variant": "#004881",
+                    "surface-container-low": "#f4f3f7",
+                    "on-tertiary-container": "#989fa6",
+                    "background": "#faf9fd",
+                    "secondary": "#1960a3",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#1a365d",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#c4c6cf",
+                    "secondary-container": "#7db6ff",
+                    "on-primary-container": "#86a0cd",
+                    "tertiary-fixed-dim": "#c1c7cf",
+                    "on-surface": "#1a1c1e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xl": "64px",
+                    "gutter": "24px",
+                    "lg": "40px",
+                    "base": "4px",
+                    "sm": "16px",
+                    "xs": "8px",
+                    "container-max": "1280px",
+                    "md": "24px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "h3": ["Inter"],
+                    "body-md": ["Inter"],
+                    "h1": ["Inter"],
+                    "h2": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h2": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
 </head>
 
 <body>
@@ -43,8 +137,8 @@
     <section id="home" class="swiper hero-swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <div class="hero hero-bg-main">
-                    <div class="container hero-content" data-aos="fade-up">
+                <div class="hero hero-bg-main" style="position: relative;">
+                    <div class="container hero-content" data-aos="fade-up" style="position: relative; z-index: 20;">
                         <h1 class="hero-title">Helma Engineering</h1>
                         <p class="hero-tagline">Reliable turnkey infrastructure and MEP delivery.</p>
                         <div class="hero-actions">
@@ -62,6 +156,10 @@
                     <div class="container hero-content">
                         <h2 class="hero-title">Artificial Intelligence</h2>
                         <p class="hero-tagline">Automate decisions with smart AI-powered workflows</p>
+                        <div class="hero-actions">
+                            <a href="#services" class="btn btn-primary">Explore Services</a>
+                            <a href="#contact" class="btn btn-secondary glass">Get in Touch</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -72,6 +170,10 @@
                     <div class="container hero-content">
                         <h2 class="hero-title">Digital Forensics</h2>
                         <p class="hero-tagline">Investigation and evidence-led digital analysis services</p>
+                        <div class="hero-actions">
+                            <a href="#services" class="btn btn-primary">Explore Services</a>
+                            <a href="#contact" class="btn btn-secondary glass">Get in Touch</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -82,6 +184,10 @@
                     <div class="container hero-content">
                         <h2 class="hero-title">Access Control</h2>
                         <p class="hero-tagline">Intelligent and secure entry management systems</p>
+                        <div class="hero-actions">
+                            <a href="#services" class="btn btn-primary">Explore Services</a>
+                            <a href="#contact" class="btn btn-secondary glass">Get in Touch</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -92,6 +198,10 @@
                     <div class="container hero-content">
                         <h2 class="hero-title">CCTV System</h2>
                         <p class="hero-tagline">24/7 surveillance for safety and visibility</p>
+                        <div class="hero-actions">
+                            <a href="#services" class="btn btn-primary">Explore Services</a>
+                            <a href="#contact" class="btn btn-secondary glass">Get in Touch</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -102,6 +212,10 @@
                     <div class="container hero-content">
                         <h2 class="hero-title">MEP</h2>
                         <p class="hero-tagline">Complete electrical, mechanical, and civil support</p>
+                        <div class="hero-actions">
+                            <a href="#services" class="btn btn-primary">Explore Services</a>
+                            <a href="#contact" class="btn btn-secondary glass">Get in Touch</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,6 +226,10 @@
                     <div class="container hero-content">
                         <h2 class="hero-title">Public Address</h2>
                         <p class="hero-tagline">Clear communication for operations and emergencies</p>
+                        <div class="hero-actions">
+                            <a href="#services" class="btn btn-primary">Explore Services</a>
+                            <a href="#contact" class="btn btn-secondary glass">Get in Touch</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -122,6 +240,10 @@
                     <div class="container hero-content">
                         <h2 class="hero-title">HVAC</h2>
                         <p class="hero-tagline">Energy-efficient indoor climate control solutions</p>
+                        <div class="hero-actions">
+                            <a href="#services" class="btn btn-primary">Explore Services</a>
+                            <a href="#contact" class="btn btn-secondary glass">Get in Touch</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -132,6 +254,10 @@
                     <div class="container hero-content">
                         <h2 class="hero-title">Fire Alarm</h2>
                         <p class="hero-tagline">Early detection systems for life safety compliance</p>
+                        <div class="hero-actions">
+                            <a href="#services" class="btn btn-primary">Explore Services</a>
+                            <a href="#contact" class="btn btn-secondary glass">Get in Touch</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -142,6 +268,10 @@
                     <div class="container hero-content">
                         <h2 class="hero-title">Fire Fighting</h2>
                         <p class="hero-tagline">Rapid suppression systems for critical environments</p>
+                        <div class="hero-actions">
+                            <a href="#services" class="btn btn-primary">Explore Services</a>
+                            <a href="#contact" class="btn btn-secondary glass">Get in Touch</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -152,35 +282,96 @@
                     <div class="container hero-content">
                         <h2 class="hero-title">Intruder Alarm</h2>
                         <p class="hero-tagline">Real-time unauthorized access detection and alerts</p>
+                        <div class="hero-actions">
+                            <a href="#services" class="btn btn-primary">Explore Services</a>
+                            <a href="#contact" class="btn btn-secondary glass">Get in Touch</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="swiper-pagination"></div>
+        <div class="swiper-button-next" style="color: white; right: 20px;"></div>
+        <div class="swiper-button-prev" style="color: white; left: 20px;"></div>
+        <!-- Interactive Globe Canvas -->
+        <canvas id="hero-globe" style="width: 600px; height: 600px; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); z-index: 10; cursor: grab;"></canvas>
+        
+        <!-- Scroll Indicator -->
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
     </section>
 
-    <section id="about" class="about section">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-content" data-aos="fade-right">
-                    <h2 class="section-title">Who We Are</h2>
-                    <h3 class="section-subtitle">Delivering Excellence in Turnkey Solutions</h3>
-                    <p class="lead">Helma Engineering Pvt Ltd is your trusted MEP and systems integration partner.</p>
-                    <p>Our teams combine engineering depth, innovation, and quality controls to execute complex projects
-                        across public and private sectors.</p>
-                </div>
-                <div class="about-image" data-aos="fade-left">
-                    <div class="ceo-card glass-card">
-                        <img src="images/CEO Profile .jpeg" alt="CEO of Helma Engineering Pvt Ltd" loading="lazy"
-                            width="140" height="140" onerror="this.src='images/ceo.jpg';">
-                        <p>"At Helma Engineering, we focus on building trust through reliable delivery, technical
-                            excellence, and long-term partnerships."</p>
-                        <h4>Chaudhary Shoaib</h4>
-                        <span>Founder, Helma Engineering Pvt Ltd</span>
+    <section id="about" class="relative pt-32 pb-xl" data-aos="fade-up">
+        <!-- Abstract Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden pointer-events-none">
+            <div class="absolute top-[10%] left-[-5%] w-[400px] h-[400px] rounded-full bg-blue-100/40 blur-[100px]"></div>
+            <div class="absolute bottom-[20%] right-[-10%] w-[500px] h-[500px] rounded-full bg-sky-50/50 blur-[120px]"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-xl items-start">
+                <!-- Left Column: CEO Profile -->
+                <div class="lg:col-span-5 w-full">
+                    <div class="glass-card p-lg rounded-xl shadow-lg shadow-primary-container/5 hover:translate-y-[-4px] transition-all duration-300">
+                        <div class="relative mb-lg">
+                            <div class="w-full aspect-square rounded-xl overflow-hidden border-4 border-white shadow-md">
+                                <img class="w-full h-full object-cover" data-alt="A professional portrait of David Sterling, a confident CEO in a tailored dark navy suit, standing in a bright, modern corporate office with floor-to-ceiling glass windows. The lighting is soft and natural, emphasizing a professional and trustworthy atmosphere. The overall aesthetic is clean and high-end, utilizing a palette of corporate blues and crisp whites. David has a warm, inviting smile, conveying approachable leadership and visionary expertise." src="images/CEO Profile .jpeg" onerror="this.src='images/ceo.jpg';"/>
+                            </div>
+                            <div class="absolute -bottom-6 -right-6 bg-primary p-xs rounded-lg shadow-xl">
+                                <span class="material-symbols-outlined text-white text-4xl" data-weight="fill">format_quote</span>
+                            </div>
+                        </div>
+                        <div class="space-y-sm">
+                            <h2 class="font-h3 text-h3 text-primary" style="margin-bottom: 0;">Message from Our CEO</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant italic leading-relaxed" style="margin-top: 1rem;">"At Helma Engineering, we focus on building trust through reliable delivery, technical excellence, and long-term partnerships."</p>
+                            <div class="pt-md border-t border-outline-variant/30 mt-sm">
+                                <div class="font-body-lg text-body-lg font-bold text-primary">Chaudhary Shoaib</div>
+                                <div class="font-label-caps text-label-caps text-secondary uppercase">Founder, Helma Engineering Pvt Ltd</div>
+                                <div class="mt-sm text-xl text-primary-container opacity-80" style="font-family: 'Inter', sans-serif; font-style: italic;">Chaudhary Shoaib</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-
+                <!-- Right Column: Who We Are -->
+                <div class="lg:col-span-7 space-y-lg">
+                    <div class="space-y-sm">
+                        <span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase block mb-2">Global Enterprise Partners</span>
+                        <h2 class="font-h1 text-h1 text-primary" style="margin-bottom: 0.5rem;">Who We Are</h2>
+                        <p class="font-h3 text-h3 text-secondary-fixed-dim mb-sm">Delivering Excellence in Turnkey Solutions</p>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-4">Helma Engineering Pvt Ltd is your trusted MEP and systems integration partner. Our teams combine engineering depth, innovation, and quality controls to execute complex projects across public and private sectors.</p>
+                    </div>
+                    <!-- Highlight Cards Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-md mt-8">
+                        <div class="p-sm bg-white border border-outline-variant/20 rounded-xl shadow-sm hover:shadow-md transition-shadow group">
+                            <div class="w-12 h-12 bg-secondary-fixed rounded-lg flex items-center justify-center mb-xs group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-on-secondary-fixed">lightbulb</span>
+                            </div>
+                            <h4 class="font-body-lg font-bold text-primary m-0">Innovation Driven</h4>
+                            <p class="font-label-caps text-on-surface-variant mt-1 mb-0">Next-gen thinking</p>
+                        </div>
+                        <div class="p-sm bg-white border border-outline-variant/20 rounded-xl shadow-sm hover:shadow-md transition-shadow group">
+                            <div class="w-12 h-12 bg-secondary-fixed rounded-lg flex items-center justify-center mb-xs group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-on-secondary-fixed">group</span>
+                            </div>
+                            <h4 class="font-body-lg font-bold text-primary m-0">Client Focused</h4>
+                            <p class="font-label-caps text-on-surface-variant mt-1 mb-0">Partnership first</p>
+                        </div>
+                        <div class="p-sm bg-white border border-outline-variant/20 rounded-xl shadow-sm hover:shadow-md transition-shadow group">
+                            <div class="w-12 h-12 bg-secondary-fixed rounded-lg flex items-center justify-center mb-xs group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-on-secondary-fixed">public</span>
+                            </div>
+                            <h4 class="font-body-lg font-bold text-primary m-0">Global Solutions</h4>
+                            <p class="font-label-caps text-on-surface-variant mt-1 mb-0">Worldwide reach</p>
+                        </div>
+                        <div class="p-sm bg-white border border-outline-variant/20 rounded-xl shadow-sm hover:shadow-md transition-shadow group">
+                            <div class="w-12 h-12 bg-secondary-fixed rounded-lg flex items-center justify-center mb-xs group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-on-secondary-fixed">verified_user</span>
+                            </div>
+                            <h4 class="font-body-lg font-bold text-primary m-0">Trusted Expertise</h4>
+                            <p class="font-label-caps text-on-surface-variant mt-1 mb-0">20+ years of trust</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -377,7 +568,7 @@
             <div class="contact-grid">
                 <div class="contact-info" data-aos="fade-right">
                     <div class="contact-image">
-                        <img src="images/Career.jpg" alt="Helma Engineering Office" loading="lazy">
+                        <img src="images/contact us.jpg" alt="Helma Engineering Office" loading="lazy">
                         <div class="image-overlay">
                             <p>Providing clarity in every interaction.</p>
                         </div>
@@ -553,6 +744,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/globe.js"></script>
 </body>
 
 </html>
